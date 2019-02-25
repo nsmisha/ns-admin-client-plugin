@@ -46,11 +46,7 @@ class NS_Admin_Plugin {
 	private $analytics;
 	private $gareports;
 	private $app_token;
-	private $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-		'https://github.com/user-name/repo-name/',
-		__FILE__,
-		$ns_plugin_slug
-	);
+	private $myUpdateChecker;
 	/**
 	 * @var NS_Client_Task_Settings
 	 */
@@ -1246,6 +1242,14 @@ class NS_Admin_Plugin {
 			add_filter( 'show_admin_bar', '__return_false' );
 			//remove_action('wp_head', '_admin_bar_bump_cb');
 		}
+	}
+	
+	function wp_init_action() {
+		$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+			'https://github.com/nsmisha/ns-admin-client-plugin',
+			__FILE__
+		);
+		$myUpdateChecker->setBranch('master');
 	}
 	
 	function ajax_verify_connection_to_remote_site() {
