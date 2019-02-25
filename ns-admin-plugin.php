@@ -5,7 +5,7 @@
 		Description: admin dashbord plugin
 		Text Domain: ns-admin-plugin
 		Author: Never Settle
-		Version: 1.0.1
+		Version: 1.0.3
 		Author URI: http://neversettle.it
 		License: GPLv2 or later
 	*/
