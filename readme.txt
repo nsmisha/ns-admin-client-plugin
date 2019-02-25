@@ -1,7 +1,7 @@
 === NS Admin Plugin ===
 Contributors: neversettle
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RM625PKSQGCCY&rm=2
-Tags: plugin, task manager, task, annotation
+Tags: 1.0.1
 Requires at least: 3.6
 Tested up to: 4.9.5
 Stable tag: task manager
